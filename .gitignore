@@ -1,0 +1,8 @@
+/node_modules
+.env
+/logs
+MAC
+.DS_Store
+/dist
+/build
+/coverage
