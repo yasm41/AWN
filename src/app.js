@@ -59,6 +59,15 @@ app.use("/api/auth"
 app.use("/api/documents", require("./routes/documentRoutes"));
 
 // ─── Health check ─────────────────────────────────────────
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Welcome to Awn API 🚀"
+  });
+});
+app.get("/test-route", (req, res) => {
+  res.json({ message: "TEST OK" });
+});
 app.get("/api/health", (req, res) => {
   res.json({
     success: true,
