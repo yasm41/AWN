@@ -46,6 +46,11 @@ const register = async (req, res) => {
     return error(res, "Registration failed", 500);
   }
 };
+const googleAuth = async (req, res) => {
+  return res.status(501).json({
+    message: "Google auth not implemented yet",
+  });
+};
 
 // ══════════════════════════════════════════════════════════
 // @route   POST /api/auth/login
@@ -239,5 +244,6 @@ module.exports = {
   logoutAll,
   getMe,
   updateMe,
+  googleAuth,
   changePassword,
 };
